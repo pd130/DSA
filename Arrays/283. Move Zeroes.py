@@ -31,7 +31,4 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] != 0:
                 nums[k] , nums[i] = nums[i] , nums[k]
-                i += 1
                 k += 1
-            else:
-                i+=1

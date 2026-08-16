@@ -11,3 +11,16 @@ class Solution:
                     ans.append(j)
                     return ans
 #Optimal Solution
+#Time : O(N)
+#Space : O(N)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        sums = {}
+        for i in range(len(nums)):
+            if nums[i] in sums:
+                sums[nums[i]] += [i]
+            if nums[i] not in sums:
+                sums[target-nums[i]] = [i] 
+        for i in sums.keys():
+            if len(sums[i]) == 2:
+                return sums[i]
